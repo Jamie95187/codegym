@@ -1,0 +1,20 @@
+taskKey="com.codegym.task.task01.task0102"\n\nKind words for the teacher
+
+
+Write a program that displays "Ellie is clever" 5 times. Each time, on a new line.
+Example output:
+Ellie is clever
+Ellie is clever
+Ellie is clever
+Ellie is clever
+Ellie is clever
+
+
+Requirements:
+1.	The program should output text.
+2.	The text should begin with &quot;Ellie&quot;.
+3.	The text should end in &quot;clever&quot;.
+4.	The text should consist of 5 lines.
+5.	The displayed text must match the task conditions.
+
+
