@@ -1,0 +1,13 @@
+2020-11-25 20:24:42 INFO  ProjectStartupHandler.runActivity(72) - ---------- Project opened ----------
+2020-11-25 20:24:42 INFO  ProjectStartupHandler.runActivity(73) - ---------- Version 3.43 ----------
+
+2020-11-25 20:24:42 INFO  ProjectStartupHandler.setAutoscrolls(337) - Autoscrolls successfully set
+2020-11-25 20:24:43 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(581) - The session is not set in the property file.
+2020-11-25 20:25:20 INFO  ApacheHttpClient.login(247) - Waiting for server response.
+2020-11-25 20:25:21 INFO  ApacheHttpClient.login(247) - Waiting for server response.
+2020-11-25 20:25:21 INFO  ApacheHttpClient.login(251) - responseCode = 200
+2020-11-25 20:25:21 INFO  ApacheHttpClient.login(274) - JSESSIONID OK
+2020-11-25 20:25:21 INFO  ApacheHttpClient.refreshUserInfo(302) - responseCode = 200
+2020-11-25 20:25:21 INFO  ApacheHttpClient.refreshUserInfo(308) - User information received.
+2020-11-25 20:25:21 INFO  ApacheHttpClient.startGA(35) - GAService started.
+2020-11-25 20:25:21 INFO  AbstractRestApiClient.startService(71) - EventsService started.
