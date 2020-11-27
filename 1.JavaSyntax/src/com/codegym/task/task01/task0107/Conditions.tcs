@@ -1,0 +1,14 @@
+taskKey="com.codegym.task.task01.task0107"\n\nNo comments needed
+
+
+Uncomment one line so that the program displays the numbers 12 and 2 (first 12, and then 2).
+
+
+Requirements:
+1.	The program should display the numbers 12 and 2.
+2.	Don&#39;t change the lines that declare variables.
+3.	The program must have only two int variables.
+4.	Don&#39;t change the lines responsible for screen output.
+5.	You need to uncomment one line and leave the remaining lines unchanged.
+
+

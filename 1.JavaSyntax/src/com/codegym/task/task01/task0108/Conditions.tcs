@@ -1,0 +1,14 @@
+taskKey="com.codegym.task.task01.task0108"\n\n2 + 3 = 5
+
+
+Comment out a few lines to display "2 plus 3 is equal to 5" on the screen.
+Note: Don't comment out the lines with variable declarations.
+
+
+Requirements:
+1.	The program should display &quot;2 plus 3 is equal to 5&quot; on the screen.
+2.	Don&#39;t change the line that declare variables.
+3.	You need to comment out at least one line.
+4.	Don&#39;t change or add commands responsible for output. You can comment them out.
+
+

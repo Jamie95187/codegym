@@ -1,0 +1,16 @@
+taskKey="com.codegym.task.task01.task0106"\n\nBugs and features
+
+
+Write a program that displays "It's not a bug - it's a feature."
+Example output:
+It's not a bug - it's a feature.
+
+
+Requirements:
+1.	The program should output text.
+2.	The text should begin with &quot;It&#39;s not a bug&quot;.
+3.	The text must end with a period.
+4.	The text should consist of 32 characters, including spaces and punctuation marks.
+5.	The displayed text must match the task conditions.
+
+
