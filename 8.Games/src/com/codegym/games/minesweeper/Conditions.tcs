@@ -1,16 +1,34 @@
-taskKey="com.codegym.games.minesweeper.part03"\n\nMinesweeper (Part 3/16)
+taskKey="com.codegym.games.minesweeper.part04"\n\nMinesweeper (Part 4/16)
+
+We need to store the state of the playing field's cells somewhere.
+To do this, create a matrix (two-dimensional array) with the dimensions of the playing field.
+Populate the matrix with GameObject objects using this formula:
+gameField[y][x] = new GameObject(x, y);
+
+Now let's display all the cells on the screen.
+The Game class's setCellColor(int, int, Color) method, whose parameters are the cell coordinates and color, will help us accomplish this.
+Call it for each cell and pass the cell coordinates and any color (for example, Color.ORANGE) as arguments.
+We suggest putting the logic to draw the matrix into a separate createGame() method,
+which we then call from the initialize method(). Run the program and see what happens.
+
+Hint: use loops to call the setCellColor(int, int, Color) method for each cell of the matrix.
+
+
+Requirements:
+1.	The MinesweeperGame class must have a private GameObject[][] gameField matrix (two-dimensional array) whose dimensions are SIDExSIDE.
+2.	The MinesweeperGame class must have a private void createGame() method.
+3.	In the createGame method(), you need to populate each cell of the gameField array with a new GameObject object with corresponding x and y coordinates.
+4.	In the createGame() method, for each cell in the gameField array, you need to call the setCellColor(int, int, Color) method with the following arguments: x and y coordinates, as well as any color (for example, Color.ORANGE).
+5.	The createGame() method must be called in the initialize() method.
+
+
+Minesweeper (Part 3/16)
 
 Because our game will use game objects (cells), we'll create a separate GameObject class
 to describe them. Let's think about what the game object needs. Naturally, we need
 its x and y coordinates on the playing field. And how can we get by without a constructor? After you do everything,
 don't forget to run the program and look at the result.
 
-
-Requirements:
-1.	There must be a public GameObject class.
-2.	The GameObject class must have a public int x field.
-3.	The GameObject class must have a public int y field.
-4.	The GameObject class must have one constructor with two int parameters that are used to initialize the x and y fields, in that order.
 
 
 Minesweeper (Part 2/16)
