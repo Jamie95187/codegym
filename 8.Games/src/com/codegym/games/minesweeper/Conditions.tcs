@@ -1,4 +1,19 @@
-taskKey="com.codegym.games.minesweeper.part02"\n\nMinesweeper (Part 2/16)
+taskKey="com.codegym.games.minesweeper.part03"\n\nMinesweeper (Part 3/16)
+
+Because our game will use game objects (cells), we'll create a separate GameObject class
+to describe them. Let's think about what the game object needs. Naturally, we need
+its x and y coordinates on the playing field. And how can we get by without a constructor? After you do everything,
+don't forget to run the program and look at the result.
+
+
+Requirements:
+1.	There must be a public GameObject class.
+2.	The GameObject class must have a public int x field.
+3.	The GameObject class must have a public int y field.
+4.	The GameObject class must have one constructor with two int parameters that are used to initialize the x and y fields, in that order.
+
+
+Minesweeper (Part 2/16)
 
 Our playing field is kind of small, don't you think? It should be 9x9 cells:
 1) There is a setScreenSize(int, int) method to set the size of the field
@@ -10,13 +25,6 @@ Our playing field is kind of small, don't you think? It should be 9x9 cells:
 
 Check the results of your work — run the program.
 
-
-Requirements:
-1.	The SIDE variable must be declared in the MinesweeperGame class.
-2.	The SIDE variable must be private, static, and final, and must be an int.
-3.	The SIDE variable must be initialized to 9 when it is declared.
-4.	There should be a public void initialize() method in the MinesweeperGame class.
-5.	The Game class&#39;s setScreenSize(int, int) method must be called with arguments (SIDE, SIDE) in the initialize() method.
 
 
 Minesweeper (Part 1/16)
