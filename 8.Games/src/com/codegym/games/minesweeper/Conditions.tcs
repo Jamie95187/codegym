@@ -1,4 +1,23 @@
-taskKey="com.codegym.games.minesweeper.part05"\n\nMinesweeper (Part 5/16)
+taskKey="com.codegym.games.minesweeper.part06"\n\nMinesweeper (Part 6/16)
+
+Now let's count the mines in adjacent cells. To do this, we'll add a field to each cell of the matrix,
+which will be responsible for the number of mined neighbors. First, we find all the neighbors,
+and then we count how many of them are mined.
+To get the list of neighbors, you now have the getNeighbors() method, which has one GameObject (cell) parameter.
+Your task is to, in a separate method, count the number of mined neighbors for each cell in gameField
+and assign this value to the appropriate field of the cell.
+Although your work is not visible (you started program to see what happens, right?), it is very important to future steps.
+
+
+Requirements:
+1.	The GameObject class must have a public int countMineNeighbors field.
+2.	The MinesweeperGame class must have a private void countMineNeighbors() method.
+3.	The countMineNeighbors() method should, for each non-mined cell in the gameField matrix, count the number of adjacent mined cells and assign this value to the countMineNeighbors field.
+4.	The countMineNeighbors() method should use the getNeighbors(GameObject gameObject) method.
+5.	In the createGame() method, after all the elements of the gameField matrix are created, the countMineNeighbors() method must be called.
+
+
+Minesweeper (Part 5/16)
 
 Minesweeper is aptly named. The player has to deal with mines, though maybe it would be best for the player to stay far away from them :)
 Let's add these mines to the game. To do this, we'll adapt the GameObject class to account
@@ -10,13 +29,6 @@ to use the Game class's getRandomNumber(int n) method, which returns a random nu
 And don't forget to count the number of generated mines in the MinesweeperGame class.
 Once you've done all that, run the program and check that nothing is broken :)
 
-
-Requirements:
-1.	The GameObject class must have a public boolean isMine field.
-2.	The GameObject class must have one constructor with (int, int, boolean) parameters that are used to initialize the x, y, and isMine fields, in that order.
-3.	There must be a private int countMinesOnField variable in the MinesweeperGame class.
-4.	When cells are created in the createGame() method, you should randomly determine whether each cell will have a mine. Use the Game class&#39;s getRandomNumber(int) method with the argument 10.
-5.	After the createGame() method is executed, the countMinesOnField variable should be assigned the value of the number of mines in the field.
 
 
 Minesweeper (Part 4/16)
