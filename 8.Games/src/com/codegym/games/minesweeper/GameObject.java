@@ -7,6 +7,7 @@ public class GameObject {
     public boolean isMine;
     public int countMineNeighbors;
     public boolean isOpen;
+    public boolean isFlag;
 
     public GameObject (int xCor, int yCor, boolean cellStatus) {
         x = xCor;
