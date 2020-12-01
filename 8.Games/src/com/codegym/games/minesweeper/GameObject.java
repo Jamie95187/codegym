@@ -7,7 +7,7 @@ public class GameObject {
     public boolean isMine;
     public int countMineNeighbors;
     public boolean isOpen = false;
-    public boolean isFlag;
+    public boolean isFlag = false;
 
     public GameObject (int xCor, int yCor, boolean cellStatus) {
         x = xCor;
@@ -35,6 +35,11 @@ public class GameObject {
         return x;
     }
 
+    // Getter method for isFlag
+    public boolean getFlagStatus() {
+        return isFlag;
+    }
+
     // Getter method for get is open
     public boolean getIsOpen() {
         return isOpen;
@@ -48,5 +53,10 @@ public class GameObject {
     // Setter method for setting isOpen to true
     public void setIsOpen() {
         isOpen = true;
+    }
+
+    // Setter method for setting isFlag to true
+    public void setFlag(boolean status) {
+        isFlag = status;
     }
 }
