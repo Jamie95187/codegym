@@ -73,11 +73,24 @@ public class MinesweeperGame extends Game {
 
     private void openTile(int x, int y) {
         if (gameField[y][x].getCellStatus()) {
+            gameField[y][x].setIsOpen();
             setCellValue(x, y, MINE);
         } else {
-            setCellNumber(x, y, gameField[y][x].getNumberOfAdjacentMines());
+            gameField[y][x].setIsOpen();
+            // No mined neighbors, recursively call openTile on each neighbor
+            if (gameField[y][x].countMineNeighbors == 0) {
+                setCellValue(x, y, "");
+                List<GameObject> result = getNeighbors(gameField[y][x]);
+                for (GameObject cell : result) {
+                    if (cell.getIsOpen() == false) {
+                        openTile(cell.getX(), cell.getY());
+                    }
+                }
+            } else {
+                gameField[y][x].setIsOpen();
+                setCellNumber(x, y, gameField[y][x].getNumberOfAdjacentMines());
+            }
         }
-        gameField[y][x].setIsOpen();
         setCellColor(x, y, Color.GREEN);
     }
 
