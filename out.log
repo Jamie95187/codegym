@@ -8679,3 +8679,16 @@
 2020-12-01 15:57:13 INFO  ApacheHttpClient.getTaskTemplateInfo(350) - responseCode = 200
 2020-12-01 15:57:14 INFO  ApacheHttpClient.getWebResourceAsStream(494) - responseCode = 200
 2020-12-01 15:57:14 INFO  ApacheHttpClient.getTaskTemplateInfo(350) - responseCode = 200
+2020-12-01 15:57:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
+2020-12-01 15:58:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
+2020-12-01 15:59:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
+2020-12-01 16:00:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
+2020-12-01 16:01:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
+2020-12-01 16:02:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
+2020-12-01 16:03:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
+2020-12-01 16:04:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
+2020-12-01 16:05:29 INFO  ApacheHttpClient.getWebResourceAsStream(494) - responseCode = 200
+2020-12-01 16:05:29 INFO  ApacheHttpClient.getTask(480) - responseCode = 200
+2020-12-01 16:05:32 INFO  ApacheHttpClient.completed(28) - responseCode = 200
+2020-12-01 16:05:32 INFO  ApacheHttpClient.getTask(480) - responseCode = 200
+2020-12-01 16:05:34 INFO  ApacheHttpClient.sendEvent(527) - responseCode = 200
