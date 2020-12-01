@@ -7,15 +7,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MinesweeperGame extends Game {
+
+    // Constants for for game grid
     private static final int SIDE = 9;
-    private GameObject[][] gameField = new GameObject[SIDE][SIDE];
-    private int countMinesOnField;
-    private int countFlags;
     private static final String MINE = "\uD83D\uDCA3";
     private static final String FLAG = "\uD83D\uDEA9";
-    private boolean isGameStopped;
+
+    // Field variables
+    private GameObject[][] gameField = new GameObject[SIDE][SIDE];
+    private int countMinesOnField = 0;
+    private int countFlags;
     private int countClosedTiles = SIDE*SIDE;
-    private int score;
+    private int score = 0;
+    private boolean isGameStopped;
 
     @Override
     public void initialize() {
@@ -26,6 +30,7 @@ public class MinesweeperGame extends Game {
     private void createGame() {
         for (int y = 0; y < SIDE; y++) {
             for (int x = 0; x < SIDE; x++) {
+                setCellValue(x, y, "");
                 boolean isMine = getRandomNumber(10) < 1;
                 if (isMine) {
                     countMinesOnField++;
@@ -35,7 +40,6 @@ public class MinesweeperGame extends Game {
             }
         }
         countFlags = countMinesOnField;
-        isGameStopped = false;
         countMineNeighbors();
     }
 
@@ -141,9 +145,22 @@ public class MinesweeperGame extends Game {
         showMessageDialog(Color.WHITE, "CONGRATULATIONS YOU WON!", Color.LIGHTGOLDENRODYELLOW, 30);
     }
 
+    private void restart(){
+        isGameStopped = false;
+        countClosedTiles = SIDE*SIDE;
+        score = 0;
+        setScore(score);
+        countMinesOnField = 0;
+        createGame();
+    }
+
     @Override
     public void onMouseLeftClick(int x, int y) {
         super.onMouseLeftClick(x, y);
+        if(isGameStopped) {
+            restart();
+            return;
+        }
         openTile(x, y);
     }
 
