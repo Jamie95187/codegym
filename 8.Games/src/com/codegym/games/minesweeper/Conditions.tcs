@@ -1,4 +1,29 @@
-taskKey="com.codegym.games.minesweeper.part06"\n\nMinesweeper (Part 6/16)
+taskKey="com.codegym.games.minesweeper.part07"\n\nMinesweeper (Part 7/16)
+
+At this stage, we'll deal with the logic to reveal cells. Let's create a corresponding method
+and a variable that will store the cell state (revealed or hidden). When revealing a cell, the method will:
+- draw a mine in the cell if it contains a mine;
+- display the number of mined neighbors if the cell does not contain a mine;
+- mark the cell as revealed in the model;
+- change the cell color.
+For convenience, we suggest adding the mine symbol to a separate constant. When the a cell be revealed? Correct!
+When you click on it with the left mouse button. To handle this click event, the engine has a special method: onMouseLeftClick(int, int).
+Let's override it in our class. It will call the method that reveals a cell.
+And, of course, run the program and enjoy the results of your work.
+
+
+Requirements:
+1.	The MinesweeperGame class must have a private static final String MINE field that is initialized when it is declared. For example, you can use the UTF-16 symbol for a bomb: &quot;\uD83D\uDCA3&quot;.
+2.	The MinesweeperGame class must have a private void openTile(int x, int y) method.
+3.	The openTile(int, int) method must draw MINE if the gameObject at the passed coordinates is a mine. Use the setCellValue(int, int, String) method.
+4.	The openTile(int, int) method must draw the number of adjacent mines if the gameObject at the passed coordinates is not a mine. Use the setCellNumber(int, int, int) method.
+5.	The GameObject class must have a public boolean isOpen field.
+6.	The openTile(int, int) method should set the isOpen field on the gameField element equal to true and use the setCellColor(int, int, Color) method to draw the cell background. For example, using Color.GREEN.
+7.	The MinesweeperGame class must override the Game parent class&#39;s onMouseLeftClick(int, int) method.
+8.	The onMouseLeftClick(int, int) method must call the openTile(int, int) method.
+
+
+Minesweeper (Part 6/16)
 
 Now let's count the mines in adjacent cells. To do this, we'll add a field to each cell of the matrix,
 which will be responsible for the number of mined neighbors. First, we find all the neighbors,
@@ -8,13 +33,6 @@ Your task is to, in a separate method, count the number of mined neighbors for e
 and assign this value to the appropriate field of the cell.
 Although your work is not visible (you started program to see what happens, right?), it is very important to future steps.
 
-
-Requirements:
-1.	The GameObject class must have a public int countMineNeighbors field.
-2.	The MinesweeperGame class must have a private void countMineNeighbors() method.
-3.	The countMineNeighbors() method should, for each non-mined cell in the gameField matrix, count the number of adjacent mined cells and assign this value to the countMineNeighbors field.
-4.	The countMineNeighbors() method should use the getNeighbors(GameObject gameObject) method.
-5.	In the createGame() method, after all the elements of the gameField matrix are created, the countMineNeighbors() method must be called.
 
 
 Minesweeper (Part 5/16)
@@ -68,31 +86,6 @@ Our playing field is kind of small, don't you think? It should be 9x9 cells:
 6) this means that the initialize() method must be declared in the MinesweeperGame class
 
 Check the results of your work — run the program.
-
-
-
-Minesweeper (Part 1/16)
-
-Let's write the entertaining Minesweeper game.
-Rules of the game:
-1.  The playing field is divided into adjacent cells (squares), some of which contain "mines".
-2.  The objective of the game is to clear the field, i.e. reveal all cells that don't contain mines.
-3.  If a cell with a mine is revealed, the game is lost. The mines are placed randomly.
-4.  If a revealed cell doesn't have a mine, a number appears in it, indicating how many "mined" cells are adjacent to the
-revealed cell. You can use these numbers to calculate the location of mines.
-5.  If the adjacent cells also do not contain mines, an "unmined" region is revealed up to
-cells that do have numbers.
-6.  Cells that you believe to contain mines can be flagged so you don't accidentally reveal them. The number of flags is equal to
-the number of mines on the game board.
-7.  If "unmined" cells are revealed, then the game is won.
-
-Now let's start implementing the game:
-To begin, create a MinesweeperGame class, which will implement the logic of the game. This class must
-inherit the Game class, which is part of CodeGym's cool "game engine".
-This and other engine classes are located in the com.codegym.engine.cell package. To use them,
-the MinesweeperGame class must include the following import statement:
-import com.codegym.engine.cell.*;
-If you did everything right, you will see the playing field when you start the application.
 
 
 
