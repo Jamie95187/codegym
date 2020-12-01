@@ -13,6 +13,7 @@ public class MinesweeperGame extends Game {
     private int countFlags;
     private static final String MINE = "\uD83D\uDCA3";
     private static final String FLAG = "\uD83D\uDEA9";
+    private boolean isGameStopped;
 
     @Override
     public void initialize() {
@@ -32,6 +33,7 @@ public class MinesweeperGame extends Game {
             }
         }
         countFlags = countMinesOnField;
+        isGameStopped = false;
         countMineNeighbors();
     }
 
@@ -75,6 +77,8 @@ public class MinesweeperGame extends Game {
         if (gameField[y][x].getCellStatus()) {
             gameField[y][x].setIsOpen();
             setCellValue(x, y, MINE);
+            setCellValueEx(x, y, Color.RED, MINE);
+            gameOver();
         } else {
             gameField[y][x].setIsOpen();
             // No mined neighbors, recursively call openTile on each neighbor
@@ -95,6 +99,9 @@ public class MinesweeperGame extends Game {
     }
 
     private void markTile(int x, int y) {
+        if(isGameStopped) {
+            return;
+        }
         GameObject cell = gameField[y][x];
         if (cell.getIsOpen() == false && countFlags > 0) {
             if (cell.getFlagStatus() == false) {
@@ -109,6 +116,11 @@ public class MinesweeperGame extends Game {
                 cell.setFlag(false);
             }
         }
+    }
+
+    private void gameOver(){
+        isGameStopped = true;
+        showMessageDialog(Color.AQUAMARINE, "GAME OVER! YOU LOSE", Color.BLACK, 10);
     }
 
     @Override
