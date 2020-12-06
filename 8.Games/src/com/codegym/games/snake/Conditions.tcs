@@ -1,4 +1,25 @@
-taskKey="com.codegym.games.snake.part04"\n\nSnake (Part 4/20)
+taskKey="com.codegym.games.snake.part05"\n\nSnake (Part 5/20)
+
+Now let's tackle the snake, and we'll remove the test creation and drawing of the apple in the createGame() method.
+
+Create a Snake class. The snake will consist of several cells, i.e. several GameObjects. What's more,
+the number of cells can vary: the snake grows
+longer when it eats apples. We'll store a list of all snake segments in a List<GameObject> snakeParts
+field.
+
+Add a constructor to the Snake class that creates three snake segment all at once.
+
+
+Requirements:
+1.	The SnakeGame class&#39;s createGame() method must not create a new apple.
+2.	There must be a public Snake class.
+3.	The Snake class must have one public constructor with two int parameters (x and y).
+4.	The Snake class must have a private List&lt;GameObject&gt; snakeParts field that is initialized with a new ArrayList&lt;&gt; when it is declared.
+5.	The constructor must create three GameObjects with the following arguments: first - (x, y); second - (x + 1, y); third - (x + 2, y).
+6.	The GameObjects created in the constructor must be added to the snakeParts list in order: first, second, third.
+
+
+Snake (Part 4/20)
 
 One of the game objects will be an apple. Create an Apple class and make it inherit the GameObject class.
 
@@ -14,17 +35,6 @@ import com.codegym.engine.cell.*;
 
 To see what an apple will look like, in the createGame() method, create an apple with coordinates (7, 7) and call its draw(Game) method.
 
-
-Requirements:
-1.	There must be a public Apple class.
-2.	The Apple class must be a descendant of the GameObject class.
-3.	The Apple class must have one constructor with two int parameters (x and y), which uses the keyword super to call the base class&#39;s constructor with the x and y parameters.
-4.	The Apple class must have a private static final String APPLE_SIGN field that is initialized when it is declared. For example, you can use the UTF-16 symbol for an apple: &quot;\uD83C\uDF4E&quot;.
-5.	The Apple class must have a public void draw(Game) method.
-6.	The draw(Game) method must call the setCellValueEx(int, int, Color, String, Color, int) method on a Game object with the following arguments: x, y, Color.NONE, APPLE_SIGN, &lt;color of the apple&gt;, 75. (Replace &lt;color of the apple&gt; with a color you like, for example, Color.GREEN).
-7.	The SnakeGame class&#39;s createGame() method must create a new apple (an instance of the Apple class) with coordinates (7, 7).
-8.	The draw(Game) method must be called on the created apple. Pass this to the method.
-9.	The Apple class must have a statement that imports the entire contents of the com.codegym.engine.cell package.
 
 
 Snake (Part 3/20)
