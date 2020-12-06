@@ -1,4 +1,31 @@
-taskKey="com.codegym.games.snake.part01"\n\nSnake (Part 1/20)
+taskKey="com.codegym.games.snake.part02"\n\nSnake (Part 2/20)
+
+Let's color the playing field. You can do this and every other game action in the initialize method. But cramming
+everything into one method is bad practice. So, we'll initially create a couple of methods, each of which will be
+responsible for a specific job: the drawScene method is for drawing the screen, and the createGame method is for the actions required
+to create the game. Accordingly, in the initialize() method, we need to call the createGame() method, which will
+in turn call the drawScene method.
+
+To paint the cells of the playing field a specific color, you need to go through all the cells (using loops) and call the
+setCellColor method on each of them.
+Hint:
+for (int x = 0; x < WIDTH; x++) {
+for (int y = 0; y < HEIGHT; y++) {
+setCellColor(x, y, Color);
+}
+}
+
+
+Requirements:
+1.	The SnakeGame class must have a private void createGame() method.
+2.	The SnakeGame class must have a private void drawScene() method.
+3.	The drawScene() method must be called in the createGame() method.
+4.	The createGame() method must be called in the initialize() method.
+5.	In the initialize() method, the createGame() method is called after the setScreenSize(int, int) method.
+6.	In the drawScene() method, call the setCellColor(int, int, Color) method on each cell of the playing field with the following arguments: x and y coordinates and any color. For example, Color.DARKSEAGREEN.
+
+
+Snake (Part 1/20)
 
 Let's write the game Snake.
 Rules of the game:
@@ -22,14 +49,5 @@ Create variables to store the width and height of the playing field.
 Override the parent class's public void initialize() method: it will contain commands that
 are executed once when you start the game. For example, setting the size of the playing field.
 
-
-Requirements:
-1.	There must be a public SnakeGame class.
-2.	The SnakeGame class must inherit the Game class.
-3.	The SnakeGame class must have a public static final int WIDTH field that is initialized to 15 when it is declared.
-4.	The SnakeGame class must have a public static final int HEIGHT field that is initialized to 15 when it is declared.
-5.	In the SnakeGame class, the initialize() method of the Game parent class must be overridden.
-6.	The Game class&#39;s setScreenSize(int, int) method must be called with arguments (WIDTH, HEIGHT) in the initialize() method.
-7.	The SnakeGame class must have a statement that imports the entire contents of the com.codegym.engine.cell package.
 
 
