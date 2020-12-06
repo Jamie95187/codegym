@@ -1,4 +1,18 @@
-taskKey="com.codegym.games.snake.part02"\n\nSnake (Part 2/20)
+taskKey="com.codegym.games.snake.part03"\n\nSnake (Part 3/20)
+
+To store the game objects, we need an additional class.
+Objects of this class will store cell coordinates.
+Let's call it GameObject.
+
+
+Requirements:
+1.	There must be a public GameObject class.
+2.	The GameObject class must have a public int x field.
+3.	The GameObject class must have a public int y field.
+4.	The GameObject class must have one constructor with two int parameters that are used to initialize the x and y fields.
+
+
+Snake (Part 2/20)
 
 Let's color the playing field. You can do this and every other game action in the initialize method. But cramming
 everything into one method is bad practice. So, we'll initially create a couple of methods, each of which will be
@@ -15,14 +29,6 @@ setCellColor(x, y, Color);
 }
 }
 
-
-Requirements:
-1.	The SnakeGame class must have a private void createGame() method.
-2.	The SnakeGame class must have a private void drawScene() method.
-3.	The drawScene() method must be called in the createGame() method.
-4.	The createGame() method must be called in the initialize() method.
-5.	In the initialize() method, the createGame() method is called after the setScreenSize(int, int) method.
-6.	In the drawScene() method, call the setCellColor(int, int, Color) method on each cell of the playing field with the following arguments: x and y coordinates and any color. For example, Color.DARKSEAGREEN.
 
 
 Snake (Part 1/20)
