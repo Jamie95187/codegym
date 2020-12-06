@@ -1,0 +1,35 @@
+taskKey="com.codegym.games.snake.part01"\n\nSnake (Part 1/20)
+
+Let's write the game Snake.
+Rules of the game:
+1.  The player controls the movement of the snake, which slithers about a square field: up, down, right and left.
+The snake cannot stop moving.
+2.  The objective of the game is to eat as many apples as possible. Apples appear in succession in a random place
+on the playing field as soon as the snake swallows the previous apple.
+3.  With each new apple, the snake grows on one segment (occupies one more cell). 3. When our game starts,
+the snake is three cells long (has three segments) and can grow to 28 cells.
+4.  As the snake grows, the game speed increases.
+5.  The snake cannot pass through itself or leave the playing field.
+5.  The game ends in victory if the snake grows to 28 segments long.
+6.  The game ends in a loss if the snake runs into itself or the edge of the playing field.
+Now let's start implementing the game:
+We need a class that will contain the game logic. Let's call it SnakeGame. Don't forget to make it inherit
+the Game class. This and other "engine" classes are in the com.codegym.engine.cell package.
+To use them, the SnakeGame class must include the following import statement:
+import com.codegym.engine.cell.*;
+If you did everything right, you can already start SnakeGame and you'll see an empty playing field.
+Create variables to store the width and height of the playing field.
+Override the parent class's public void initialize() method: it will contain commands that
+are executed once when you start the game. For example, setting the size of the playing field.
+
+
+Requirements:
+1.	There must be a public SnakeGame class.
+2.	The SnakeGame class must inherit the Game class.
+3.	The SnakeGame class must have a public static final int WIDTH field that is initialized to 15 when it is declared.
+4.	The SnakeGame class must have a public static final int HEIGHT field that is initialized to 15 when it is declared.
+5.	In the SnakeGame class, the initialize() method of the Game parent class must be overridden.
+6.	The Game class&#39;s setScreenSize(int, int) method must be called with arguments (WIDTH, HEIGHT) in the initialize() method.
+7.	The SnakeGame class must have a statement that imports the entire contents of the com.codegym.engine.cell package.
+
+
